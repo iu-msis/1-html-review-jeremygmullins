@@ -1,0 +1,26 @@
+nav{
+    padding: 15px;
+    background-color: burlywood;
+  }
+  
+  a{
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+  }
+  
+  header{
+    background-color: gray;
+    color: beige;
+    text-align: center;
+  }
+
+  main{
+      padding-left: 50px;
+  }
+
+  p{
+      background-color: antiquewhite;
+      padding-right: 50px;
+  }
+
