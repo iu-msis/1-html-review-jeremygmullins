@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="./css/styles.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="./css/sortable-theme-dark.css" />
+
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    <script src="./js/sortable.min.js"></script>
+
+    <header class="row">
+
+      <div class="col-lg-4">
+      </div>
+      <div class="col-lg-4">
+      <h1>Jeremiah Moylan</h1>
+      </div>
+      <div class="col-lg-4">
+      </div>
+      
+      </header>
+    
+      <nav class="row navbar navbar-default">
+        <div class=" navbar-collapse" id="mymenu">
+        <a href="index.html">Home</a>  
+        <a href="books.html">Favorite Books</a> 
+        <a href="music.html">Favorite Music</a> 
+        </div>
+       </nav>
+
+       <br>
+  
+       <main class="row">
+  
+        <h3>Jeremiah's Favorite Books</h3>
+  
+        <table class="sortable-theme-dark" data-sortable>
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Author</th>
+                <th scope="col">Year Published</th> 
+                <th scope="col">Publisher</th>
+                <th scope="col">Page Count</th>
+                <th scope="col">MSRP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Slaughterhouse Five</th>
+                <td>Kurt Vonnegut</td>
+                <td>1969</td>
+                <td>Delacorte</td>
+                <td>192</td>
+                <td>$7.99</td>
+              </tr>
+              <tr>
+                <th scope="row">Greenlights</th>
+                <td>Matthew McConnaughey</td>
+                <td>2020</td>
+                <td>Crown</td>
+                <td>304</td>
+                <td>$16.95</td>
+              </tr>
+              <tr>
+                <th scope="row">Can't Hurt Me</th>
+                <td>David Goggins</td>
+                <td>2018</td>
+                <td>Lioncrest</td>
+                <td>364</td>
+                <td>$17.95</td>
+              </tr>
+              <tr>
+                <th scope="row">The Subtle Art of Not Giving a F*ck</th>
+                <td>Mark Manson</td>
+                <td>2016</td>
+                <td>Harper</td>
+                <td>224</td>
+                <td>$11.60</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <form>
+            
+            <div class="mb-3">
+              <label for="exampleInputTitle1" class="form-label">Title</label>
+              <input type="text" class="form-control" id="exampleInputTitle1" aria-describedby="TitleHelp">
+              <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputAuthor1" class="form-label">Author</label>
+              <input type="text" class="form-control" id="exampleInputAuthor1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputYear1" class="form-label">Year Published</label>
+                <input type="number" class="form-control" id="exampleInputYear1">
+                </div>
+            <div class="mb-3">
+                <label for="exampleInputPublisher1" class="form-label">Publisher</label>
+                <input type="text" class="form-control" id="exampleInputPublisher1">
+              </div>
+            <div class="mb-3">
+                <label for="exampleInputCount1" class="form-label">Page Count</label>
+                <input type="number" class="form-control" id="exampleInputCount1">
+              </div>
+            <div class="mb-3">
+                <label for="exampleInputMSRP1" class="form-label">MSRP</label>
+                <input type="number" class="form-control" id="exampleInputMSRP1">
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            
+          </form>
+  
+       </main>
+
+  </body>
+</html>
