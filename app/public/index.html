@@ -56,6 +56,10 @@
 
       <div id="offerApp">
 
+        <form v-on:submit.prevent="fetchUserData">
+          <button type="submit">Refresh</button>
+        </form>
+
       <!-- <div class="col-lg-3"> -->
         <a target="_blank" href='https://www.dailyedge.ie/irish-beards-ginger-1034573-Aug2013/'>
         <img v-bind:src="person.picture.large">
