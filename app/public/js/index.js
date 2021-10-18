@@ -19,7 +19,8 @@ const Offer = {
                     "company":"IU",
                     "offerDate": "2021-08-09"
                 }
-            ]
+            ],
+        books: [],
         }
     },
     computed: {
@@ -42,10 +43,22 @@ const Offer = {
                 console.error(err);
             })
             console.log("B");
-        }
+        },
+        fetchBooksData() {
+            fetch('/api/books/')
+            .then( response => response.json() )
+            .then( (responseJson) => {
+                console.log(responseJson);
+                this.books = responseJson;
+            })
+            .catch( (err) => {
+                console.error(err);
+            })
+        },
     },
+    
     created() {
-        this.fetchUserData();
+        this.fetchBooksData();
     } //end created
 } // end Offer config
   

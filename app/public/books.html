@@ -22,6 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
     <script src="./js/sortable.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
 
     <header class="row">
 
@@ -48,10 +49,14 @@
        <main class="row">
   
         <h3>Jeremiah's Favorite Books</h3>
+
+        <div id=offerApp>
+      
   
         <table class="sortable-theme-dark" data-sortable>
             <thead>
               <tr>
+                <th scope="col">ID</th>
                 <th scope="col">Title</th>
                 <th scope="col">Author</th>
                 <th scope="col">Year Published</th> 
@@ -61,6 +66,15 @@
               </tr>
             </thead>
             <tbody>
+              <tr v-for="b in books">
+                <td>{{b.id}}</td>
+                <td>{{b.title}}</td>
+                <td>{{b.author}}</td>
+                <td>{{b.yearpublished}}</td>
+                <td>{{b.publisher}}</td>
+                <td>{{b.pagecount}}</td>
+                <td>{{b.price}}</td>
+              </tr>
               <tr>
                 <th scope="row">Slaughterhouse Five</th>
                 <td>Kurt Vonnegut</td>
@@ -96,38 +110,40 @@
             </tbody>
           </table>
 
+        </div>
+        
           <form>
             
             <div class="mb-3">
-              <label for="exampleInputTitle1" class="form-label">Title</label>
-              <input type="text" class="form-control" id="exampleInputTitle1" aria-describedby="TitleHelp">
+              <label for="title" class="form-label">Title</label>
+              <input type="text" class="form-control" id="title" aria-describedby="TitleHelp">
               <div id="emailHelp" class="form-text"></div>
             </div>
             <div class="mb-3">
-              <label for="exampleInputAuthor1" class="form-label">Author</label>
-              <input type="text" class="form-control" id="exampleInputAuthor1">
+              <label for="author" class="form-label">Author</label>
+              <input type="text" class="form-control" id="author">
             </div>
             <div class="mb-3">
-                <label for="exampleInputYear1" class="form-label">Year Published</label>
-                <input type="number" class="form-control" id="exampleInputYear1">
+                <label for="yearpublished" class="form-label">Year Published</label>
+                <input type="number" class="form-control" id="yearpublished">
                 </div>
             <div class="mb-3">
-                <label for="exampleInputPublisher1" class="form-label">Publisher</label>
-                <input type="text" class="form-control" id="exampleInputPublisher1">
+                <label for="publisher" class="form-label">Publisher</label>
+                <input type="text" class="form-control" id="publisher">
               </div>
             <div class="mb-3">
-                <label for="exampleInputCount1" class="form-label">Page Count</label>
-                <input type="number" class="form-control" id="exampleInputCount1">
+                <label for="pagecount" class="form-label">Page Count</label>
+                <input type="number" class="form-control" id="pagecount">
               </div>
             <div class="mb-3">
-                <label for="exampleInputMSRP1" class="form-label">MSRP</label>
-                <input type="number" class="form-control" id="exampleInputMSRP1">
+                <label for="price" class="form-label">MSRP</label>
+                <input type="number" class="form-control" id="price">
               </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             
           </form>
   
        </main>
-
+       <script src="js/index.js"></script>
   </body>
 </html>
