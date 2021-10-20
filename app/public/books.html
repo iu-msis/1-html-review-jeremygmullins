@@ -72,10 +72,10 @@
                 <td>{{b.author}}</td>
                 <td>{{b.yearpublished}}</td>
                 <td>{{b.publisher}}</td>
-                <td>{{b.pagecount}}</td>
+                <td>{{b.pagenum}}</td>
                 <td>{{b.price}}</td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <th scope="row">Slaughterhouse Five</th>
                 <td>Kurt Vonnegut</td>
                 <td>1969</td>
@@ -106,42 +106,41 @@
                 <td>Harper</td>
                 <td>224</td>
                 <td>$11.60</td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
 
-        </div>
+     
         
-          <form>
-            
+          <form v-on:submit.prevent="postNewBook">
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
-              <input type="text" class="form-control" id="title" aria-describedby="TitleHelp">
-              <div id="emailHelp" class="form-text"></div>
+              <input type="text" v-model="bookForm.title" class="form-control" id="title" aria-describedby="TitleHelp">
+              <!-- <div id="emailHelp" class="form-text"></div> -->
             </div>
             <div class="mb-3">
               <label for="author" class="form-label">Author</label>
-              <input type="text" class="form-control" id="author">
+              <input type="text" v-model="bookForm.author" class="form-control" id="author">
             </div>
             <div class="mb-3">
                 <label for="yearpublished" class="form-label">Year Published</label>
-                <input type="number" class="form-control" id="yearpublished">
+                <input type="number" v-model="bookForm.yearpublished" class="form-control" id="yearpublished">
                 </div>
             <div class="mb-3">
                 <label for="publisher" class="form-label">Publisher</label>
-                <input type="text" class="form-control" id="publisher">
+                <input type="text" v-model="bookForm.publisher" class="form-control" id="publisher">
               </div>
             <div class="mb-3">
                 <label for="pagecount" class="form-label">Page Count</label>
-                <input type="number" class="form-control" id="pagecount">
+                <input type="number" v-model="bookForm.pagenum" class="form-control" id="pagecount">
               </div>
             <div class="mb-3">
                 <label for="price" class="form-label">MSRP</label>
-                <input type="number" class="form-control" id="price">
+                <input type="number" v-model="bookForm.price" class="form-control" id="price">
               </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-            
           </form>
+        </div>
   
        </main>
        <script src="js/index.js"></script>
