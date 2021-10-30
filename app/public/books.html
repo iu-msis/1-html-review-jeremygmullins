@@ -74,45 +74,22 @@
                 <td>{{b.publisher}}</td>
                 <td>{{b.pagenum}}</td>
                 <td>{{b.price}}</td>
+                <td></td>
+                <td>
+                  <button type="button" 
+                    class="btn btn-outline-secondary btn-sm"
+                    v-on:click="selectbookToEdit(b)">Edit</button>
+                  <button type="button" class="btn btn-outline-secondary btn-sm"
+                    v-on:click="postDeletedBook(b)">Delete</button>
+                </td>
               </tr>
-              <!-- <tr>
-                <th scope="row">Slaughterhouse Five</th>
-                <td>Kurt Vonnegut</td>
-                <td>1969</td>
-                <td>Delacorte</td>
-                <td>192</td>
-                <td>$7.99</td>
-              </tr>
-              <tr>
-                <th scope="row">Greenlights</th>
-                <td>Matthew McConnaughey</td>
-                <td>2020</td>
-                <td>Crown</td>
-                <td>304</td>
-                <td>$16.95</td>
-              </tr>
-              <tr>
-                <th scope="row">Can't Hurt Me</th>
-                <td>David Goggins</td>
-                <td>2018</td>
-                <td>Lioncrest</td>
-                <td>364</td>
-                <td>$17.95</td>
-              </tr>
-              <tr>
-                <th scope="row">The Subtle Art of Not Giving a F*ck</th>
-                <td>Mark Manson</td>
-                <td>2016</td>
-                <td>Harper</td>
-                <td>224</td>
-                <td>$11.60</td>
-              </tr> -->
+           
             </tbody>
           </table>
 
      
         
-          <form v-on:submit.prevent="postNewBook">
+          <form v-on:submit.prevent="postBook">
             <div class="mb-3">
               <label for="title" class="form-label">Title</label>
               <input type="text" v-model="bookForm.title" class="form-control" id="title" aria-describedby="TitleHelp">
